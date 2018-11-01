@@ -8,3 +8,4 @@ package.skeleton(list = c("forwardSelection","backElimination","optimumElastic",
                           "setTrainTest","transposeDeIdentify"),
                  name = "mooreFunctions")
 roxygenize("C:/Users/James Moore/Documents/MooreFunctions/mooreFunctions")
+devtools::document("C:/Users/James Moore/Documents/MooreFunctions/mooreFunctions")
