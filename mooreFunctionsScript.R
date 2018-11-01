@@ -14,7 +14,10 @@ create("survivalAnalysis")
 setwd("./survivalAnalysis")
 document()
 
-
+setwd("..")
+create("ZeroInflPoisson")
+setwd("./ZeroInflPoisson")
+document()
 
 #package.skeleton(list = c("forwardSelection","backElimination","optimumElastic",
 #                          "setTrainTest","transposeDeIdentify"),
