@@ -1,0 +1,5 @@
+backElimination         Backwards Elimination Function
+forwardSelection        Forward Selection Method
+optimumElastic          Optimized Elastic Net Regression
+setTrainTest            Set the Training and Test Set
+transposeDeIdentify     Format Data to your liking
