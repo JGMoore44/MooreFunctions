@@ -2,5 +2,6 @@
 install.packages("devtools")
 library(devtools)
 
-package.skeleton(list = c(),
+package.skeleton(list = c("forwardSelection","backElimination","optimumElastic",
+                          ""),
                  name = "mooreFunctions")
