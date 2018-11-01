@@ -9,6 +9,11 @@ create("mooreFunctions")
 setwd("./mooreFunctions")
 document()
 
+setwd(".")
+create("survivalAnalysis")
+setwd("./survivalAnalysis")
+document()
+
 
 
 #package.skeleton(list = c("forwardSelection","backElimination","optimumElastic",
