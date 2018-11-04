@@ -2,6 +2,9 @@
 
 export(backElimination)
 export(forwardSelection)
+export(glmBackElimination)
+export(glmForwardSelection)
+export(kmSurvEstConditional)
 export(optimumElastic)
 export(setTrainTest)
 export(transposeDeIdentify)
