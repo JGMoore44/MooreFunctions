@@ -4,8 +4,8 @@
 #' @param  dat The Data Pbject to be Parsed into training and test
 #' @param  option Build Training or Test Set
 #' @param  foldToTest Indicates which fold will be test set
-#' @param nfolds Indicates the number of k-folds for CV; Default = 5
-#' @export set a training or test set for the data based on arguments `nfolds` and `option`
+#' @param  nfolds Indicates the number of k-folds for CV; Default = 5
+#' @export 
 #' @examples 
 #' setTrainTest()
 setTrainTest <-
