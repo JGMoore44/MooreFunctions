@@ -23,3 +23,4 @@ document()
 #                          "setTrainTest","transposeDeIdentify"),
 #                 name = "mooreFunctions")
 #devtools::document("C:/Users/James Moore/Documents/MooreFunctions/mooreFunctions")
+

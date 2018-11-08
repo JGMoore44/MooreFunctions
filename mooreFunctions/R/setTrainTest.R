@@ -1,25 +1,33 @@
 #' Set the Training and Test Set
 #' 
 #' This function determines Training and Test sets for 5 fold CV
-#' @param  dat the data to be analyzed
+#' @param  dat The Data Pbject to be Parsed into training and test
 #' @param  option Build Training or Test Set
 #' @param  foldToTest Indicates which fold will be test set
-#' @export
+#' @param nfolds Indicates the number of k-folds for CV; Default = 5
+#' @export set a training or test set for the data based on arguments `nfolds` and `option`
 #' @examples 
 #' setTrainTest()
 setTrainTest <-
-function(dat,option="train",foldToTest=1){
+function(dat,option="train",foldToTest=1,nfolds=5){
+  #random indexing to determine which fold to enter
+  x = seq(1:nrow(dat))
+  set.seed(1234)
+  xperm = sample(x,length(x))
+  
+  #set fold number
   for(j in 1:nrow(dat)){
-    foldNum = (j-1)%%5 + 1
+    foldNum = xperm[j]%%nfolds + 1
     dat$fold[j] = foldNum
   }
+  #create training or test depending on argument
   if(option == "train"){
-    trainingSet = dat[-which(dat$fold==foldToTest),]
-    trainingSet = subset(trainingSet, select = -c(fold))
-    return(trainingSet)
+    set = dat[-which(dat$fold==foldToTest),]
+    set = subset(set, select = -c(fold))
+    return(set)
   }else{
-    testSet = dat[which(dat$fold==foldToTest),]
-    testSet = subset(testSet,select = -c(fold))
-    return(testSet)
+    set = dat[which(dat$fold==foldToTest),]
+    set = subset(set,select = -c(fold))
+    return(set)
   }
 }

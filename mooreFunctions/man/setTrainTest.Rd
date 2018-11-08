@@ -4,14 +4,16 @@
 \alias{setTrainTest}
 \title{Set the Training and Test Set}
 \usage{
-setTrainTest(dat, option = "train", foldToTest = 1)
+setTrainTest(dat, option = "train", foldToTest = 1, nfolds = 5)
 }
 \arguments{
-\item{dat}{the data to be analyzed}
+\item{dat}{The Data Pbject to be Parsed into training and test}
 
 \item{option}{Build Training or Test Set}
 
 \item{foldToTest}{Indicates which fold will be test set}
+
+\item{nfolds}{Indicates the number of k-folds for CV; Default = 5}
 }
 \description{
 This function determines Training and Test sets for 5 fold CV
