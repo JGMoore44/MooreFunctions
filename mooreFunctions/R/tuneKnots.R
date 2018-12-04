@@ -9,6 +9,7 @@
 #' @examples  
 #' tuneKnots(Surv(time,delta)~gender+age+race,data = kidtran,nKnot = 15, criterion = "BIC")
 tuneKnots = function(formula,data,nKnot = 20,criterion = "AIC"){
+  library(flexsurv)
   #Define Information Vectors
   aicVect =numeric(nKnot)
   bicVect = numeric(nKnot)
